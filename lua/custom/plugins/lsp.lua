@@ -1,4 +1,11 @@
  local gh = require("util").gh
+  vim.pack.add {
+  { src = gh 'neovim/nvim-lspconfig' },
+  { src = gh 'mason-org/mason.nvim' },
+  { src = gh 'mason-org/mason-lspconfig.nvim' },
+  { src = gh 'WhoIsSethDaniel/mason-tool-installer.nvim' },
+}
+ 
  -- [[ LSP Configuration ]]
   -- Brief aside: **What is LSP?**
   --
@@ -26,7 +33,7 @@
   -- and elegantly composed help section, `:help lsp-vs-treesitter`
 
   -- Useful status updates for LSP.
-  vim.pack.add { gh 'j-hui/fidget.nvim' }
+  vim.pack.add {{ src = gh 'j-hui/fidget.nvim' }}
   require('fidget').setup {}
 
   --  This function gets run when an LSP attaches to a particular buffer.
@@ -153,14 +160,7 @@
     -- },
   }
 
-  vim.pack.add {
-    gh 'neovim/nvim-lspconfig',
-    gh 'mason-org/mason.nvim',
-    gh 'mason-org/mason-lspconfig.nvim',
-    gh 'WhoIsSethDaniel/mason-tool-installer.nvim',
-  }
-
-  -- Automatically install LSPs and related tools to stdpath for Neovim
+ -- Automatically install LSPs and related tools to stdpath for Neovim
   require('mason').setup {}
 
   -- Ensure the servers and tools above are installed
