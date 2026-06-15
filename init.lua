@@ -36,12 +36,9 @@ local function run_build(name, cmd, cwd)
       end
     end,
   })
-  -- require 'kickstart.plugins.debug'
-  -- require 'kickstart.plugins.indent_line'
-  -- require 'kickstart.plugins.lint'
-  require 'kickstart.plugins.autopairs'
-  require 'kickstart.plugins.tree'
-  require 'kickstart.plugins.gitsigns'
+  require 'custom.plugins.autopairs'
+  require 'custom.plugins.tree'
+  require 'custom.plugins.indent_line'
   require 'custom.autocmds'
   require 'custom.keymaps'
   require 'custom.plugins.search_navigate'
@@ -53,4 +50,4 @@ local function run_build(name, cmd, cwd)
   require 'custom.plugins.colorscheme'
 
 
-  vim.cmd.colorscheme("tokyonight-storm")
+  vim.cmd.colorscheme("rose-pine-moon")
