@@ -50,4 +50,4 @@ local function run_build(name, cmd, cwd)
   require 'custom.plugins.colorscheme'
 
 
-  vim.cmd.colorscheme("rose-pine-moon")
+  vim.cmd.colorscheme("gruvbox")
